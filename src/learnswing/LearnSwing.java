@@ -6,55 +6,55 @@ package learnswing;
 //import myframe.MyFrame;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class LearnSwing implements ActionListener {
-    
+public class LearnSwing {
+
+    JButton button;  // Declare the button as an instance variable so it can be accessed in both methods
+
     public static void main(String[] args) {
-        // TODO code application logic here
-        // MyFrame frame = new MyFrame();
+        LearnSwing learnSwing = new LearnSwing();  // Create an instance of the class to access non-static members
+        learnSwing.createUI();  // Call a method to set up the UI
+    }
+
+    // Method to create the UI components
+    public void createUI() {
         ImageIcon icon = new ImageIcon("D:\\Codes\\Java\\Swing\\LearnSwing\\src\\myframe\\logo2.png");
         JLabel label = new JLabel("Hi");
-        JButton button = new JButton("Click Me");
+        button = new JButton("Click Me");
 
-        button.setBounds(100,100,200,200);
+        button.setBounds(100, 100, 200, 200);
+        button.addActionListener(e -> System.out.println("Clicked"));  // Register the button with this class's ActionListener
+//        button.addActionListener(this);  // Register the button with this class's ActionListener
+        button.setFocusable(Boolean.FALSE);
+        button.setIcon(icon);
+        button.setHorizontalTextPosition(JButton.CENTER);
+        button.setVerticalTextPosition(JButton.BOTTOM);
+        button.setFont(new Font("Comic Sans",Font.BOLD,20));
+        button.setForeground(Color.yellow);
+        button.setBackground(Color.lightGray);
+        button.setIconTextGap(-10);
+        button.setBorder(BorderFactory.createEtchedBorder());
+        button.setEnabled(true);
 
         label.setIcon(icon);
-
-//        JPanel panel = new JPanel();
-//        panel.setBackground(Color.BLUE);
-//        panel.setBounds(0, 0, 300, 300);
-//
-//        JPanel panel2 = new JPanel();
-//        panel2.setBackground(Color.red);
-//        panel2.setBounds(300, 0, 300, 300);
-//
-//        JPanel panel3 = new JPanel();
-//        panel3.setBackground(Color.GREEN);
-//        panel3.setBounds(0, 300, 600, 300);
 
         JFrame frame = new JFrame("Hello");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
-        frame.setSize(750,750);
+        frame.setSize(750, 750);
         frame.setVisible(true);
-//        frame.add(panel);
-//        panel.add(label);
-//        frame.add(panel2);
-//        frame.add(panel3);
-        button.addActionListener();
         frame.add(button);
         frame.setIconImage(icon.getImage());
-
-
-        @Override
-        public void actionPerformed(ActionEvent e){
-            if (e.getSource()==button){
-                System.out.println("Clicked");
-            }
-        }
-
     }
-    
+
+    // This method will be called when the button is clicked
+//    @Override
+//    public void actionPerformed(ActionEvent e) {
+//        if (e.getSource() == button) {
+//            System.out.println("Clicked");
+//        }
+//    }
 }
