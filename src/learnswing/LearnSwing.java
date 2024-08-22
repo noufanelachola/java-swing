@@ -43,13 +43,16 @@ public class LearnSwing implements ActionListener {
 //        panel.add(label);
 //        frame.add(panel2);
 //        frame.add(panel3);
+        button.addActionListener();
         frame.add(button);
         frame.setIconImage(icon.getImage());
 
 
         @Override
         public void actionPerformed(ActionEvent e){
-            if (e.getSource())
+            if (e.getSource()==button){
+                System.out.println("Clicked");
+            }
         }
 
     }
