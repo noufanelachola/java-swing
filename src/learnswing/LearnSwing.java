@@ -4,15 +4,14 @@
  */
 package learnswing;
 
-import SwingBorderLayout.SwingBorderLayout;
-import javax.swing.*;
-import java.awt.*;
+import FlowLayoutPackage.FlowLayoutClass;
 
 
 public class LearnSwing {
 
     public static void main(String[] args) {
-        SwingBorderLayout a = new SwingBorderLayout();
+         //SwingBorderLayout a = new SwingBorderLayout();
+        FlowLayoutClass b = new FlowLayoutClass();
     }
 
 }
