@@ -1,4 +1,4 @@
-package SwingBorderLayout;
+package Layouts;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +8,7 @@ public class SwingBorderLayout extends JFrame {
 //        JFrame frame = new JFrame();
         this.setLayout(new BorderLayout(10,5));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("SwingBorderLayout");
+        this.setTitle("Layouts");
         this.setVisible(true);
         this.setSize(500,500);
 
@@ -64,4 +64,6 @@ public class SwingBorderLayout extends JFrame {
         panel2.add(panel10,BorderLayout.WEST);
 
     }
+
+
 }

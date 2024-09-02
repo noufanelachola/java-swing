@@ -4,14 +4,17 @@
  */
 package learnswing;
 
-import FlowLayoutPackage.FlowLayoutClass;
+import Layouts.SwingBorderLayout;
+import Layouts.SwingFlowLayout;
+import Layouts.SwingGridLayout;
 
 
 public class LearnSwing {
 
     public static void main(String[] args) {
          //SwingBorderLayout a = new SwingBorderLayout();
-        FlowLayoutClass b = new FlowLayoutClass();
+        //SwingFlowLayout b = new SwingFlowLayout();
+        SwingGridLayout c = new SwingGridLayout();
     }
 
 }

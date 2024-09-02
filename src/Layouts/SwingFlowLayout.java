@@ -1,10 +1,10 @@
-package FlowLayoutPackage;
+package Layouts;
 
 import javax.swing.*;
 import java.awt.FlowLayout;
 
-public class FlowLayoutClass {
-    public FlowLayoutClass() {
+public class SwingFlowLayout {
+    public SwingFlowLayout() {
         JFrame frame = new JFrame("FlowLayoutPackage");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500,500);
